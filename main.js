@@ -174,7 +174,10 @@ this._sounds().play('gameover')
     if(score >= 6){
       player.classList.add('show');
       player.textContent='+'+this.bonusScore;
+      if(this.player1Turn){
+        
       this._sounds().play('bonus');
+      }
       setTimeout(()=>{
         
     player.classList.remove('show')
